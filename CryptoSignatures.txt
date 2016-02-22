@@ -1,0 +1,139 @@
+'File For CryptoDetect Files based on File Signatures (only looks at first 256 Bytes)
+' Format Bad
+'Bad:<Name>
+'UniqueID:<Number Unique to this signature Optional>
+'Desc:<any text to add>
+'Offset:<Decmial number 0 is first Character>
+'Bytes:<Hex Byteswith or without spaces>
+'Offset:<Decimal number 0 is first character>
+'Bytes:<....>
+'
+'format Good  Can Have multiple Sigatures per extention
+'Good:<Name>
+'UniqueID:<Number Unique to this Signature optional>
+'Ext:<extention with or without leading .>
+'Offset:<Decmial number 0 is first Character>
+'Bytes:<Hex Byteswith or without spaces>
+'Offset:<Decimal number 0 is first character>
+'Bytes:<....>
+'
+'  Max Bypes per Signature 200
+' max Signatures Bad:
+' max signatures good:
+Bad:CryptoWall
+Unigueid:dmn20140628-01
+Desc:First signature
+offset:8
+Bytes:00 01 00 00 00 
+offset:15
+Bytes:00 00 00 00 00 00 00 00 00
+Bad:CryptoWall-0
+Desc:Found on the Internet header= !crypted!
+Offset:0
+Bytes:21 00 63 00 72 00 79 00 79 00 70 00 74  00 65  00 64  00 21 
+Bad:CryptoWall-1
+Uniqueid:dmn20141015-01
+Desc:Found and identified the header
+Offset:0
+bytes:25 8f e5 ab 8c c6 fb d4 2c 4c 0a 88 e7 f1 78 9c
+Bad:CryptoWall-2
+Uniqueid:dmn20160105-01
+Desc:Found and identified the header
+Offset:0
+bytes:8C 50 39 B4 B3 A6 B1 03 8E D4 77 74 D0 1A 41 EC
+'good signatures found from http://www.filesignatures.net/
+Good:Microsoft Excel spreedsheet
+Ext:.xls
+offset:0
+Bytes:D0 CF 11 E0 A1 B1 1A E1 
+Good:Microsoft Word 
+ext:DOC
+offset:0
+Bytes:D0 CF 11 E0 A1 B1 1A E1 
+Good:RTF as .doc
+ext:.doc
+offset:0
+bytes:7b 5c 72 74 66
+offset:7
+bytes:5c 61 6e 73
+Good:RTF format
+ext:.rtf
+offset:0
+bytes:7b 5c 72 74 66
+offset:7
+bytes:5c 61 6e 73
+Good:Microsoft Document Templete
+Ext:dot
+offset:0
+Bytes:D0 CF 11 E0 A1 B1 1A E1 
+Good:Microsoft PowerPoint
+Ext:PPT
+offset:0
+Bytes:D0 CF 11 E0 A1 B1 1A E1 
+Good:Microsoft Publisher
+Ext: PUB
+offset:0
+Bytes:D0 CF 11 E0 A1 B1 1A E1 
+'Also many other Mictosoft Office Project Files (old Version)
+Good:Word 2.0
+Ext:Doc
+Offset:0
+Bytes:DB A5 2D 00
+
+Good:MS Office Excel 2007
+Ext:XLSX
+Offset:0
+Bytes:50 4b 03 04
+
+Good:MS Office Word 2007
+Ext:docx
+Offset:0
+Bytes:50 4b 03 04
+
+Good:Adobe PDF
+ext:pdf
+offset:0
+bytes:25 50 44 46
+
+good:Generic jpg
+ext:jpg
+offset:0
+bytes:FF  D8 FF
+
+Good:MS Word Password Protected 
+ext:docx
+offset:0
+bytes:d0 cf 11 e0
+
+Good:MS Excel Password Protected
+Ext:xlsx
+offset:0
+bytes:d0 cf 11 e0
+
+
+Good:TIFF file_1
+ext:tif
+offset:0
+bytes: 4d 20 49
+
+Good:TIFF file_2
+ext:tif
+offset:0
+bytes: 49 49 2A 00
+
+Good:TIFF file_3
+ext:tif
+offset:0
+bytes: 4d 4D 00 2A
+
+Good:TIFF file_4
+ext:tif
+offset:0
+bytes: 4d 4D 00 2B
+
+Good:Wav Audio File
+ext:wav
+offset:0
+bytes: 52 49 46 46
+offset:12
+bytes: 66 6d 74
