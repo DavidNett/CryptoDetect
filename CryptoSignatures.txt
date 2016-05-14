@@ -41,6 +41,10 @@ Uniqueid:dmn20160105-01
 Desc:Found and identified the header
 Offset:0
 bytes:8C 50 39 B4 B3 A6 B1 03 8E D4 77 74 D0 1A 41 EC
+Bad:Locky Ransomware
+Uniqueid:Badlocky
+Ext:locky
+
 'good signatures found from http://www.filesignatures.net/
 Good:Microsoft Excel spreedsheet
 Ext:.xls
